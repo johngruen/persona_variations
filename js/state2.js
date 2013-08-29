@@ -19,17 +19,24 @@ var errors = [
 //HELPER PROTOTYPE FUNC FOR CHECKING MATCHES TO REGISTER
 Array.prototype.compareLike = function(array) {
 	for(var i = 0; i < this.length; i++) {
-		if (this[i] !== array[i]) return false;
+		if (this[i] !== array[i]) {
+			return false
+		}
 	}
 	return true;
 }
 
+Array.prototype.clone = function() {
+	return this.slice(0);
+}
+
 
 /*=====CHECKER OBJECT for 1st 4 boxes======*/
-function Checker(state,checkbox,index) {
+function Checker(state,checkbox,index,conflicts) {
 	this.state = state;
 	this.name = checkbox;
 	this.index = index;
+	this.conflicts = conflicts;
 	this.checkbox = document.getElementById(checkbox);
 	this.parent = this.checkbox.parentNode;
 	this.stateSettings();
@@ -38,15 +45,19 @@ function Checker(state,checkbox,index) {
 
 //RECORDS A CLICK AND (possibly) TOGGLES STATE
 Checker.prototype.bang = function() {
-	var specRegister = register;
-	this.iCanHazToggle();
 
-	register[this.index] = this.state;
-	
-	currentDisplayState = setDisplayState();
+	var specState = this.iCanHazToggle(); 
+	var specRegister = register.clone();
+	if (this.conflicts !== null) specRegister = updateForConflicts(specRegister,this.conflicts);
+	specRegister[this.index] = specState; 
+	var newStateIndex = setDisplayState(specRegister)
+	if ( newStateIndex >= 0) {
+		this.state = specState;
+		register = validStates[newStateIndex].stateSet.clone();
+		currentDisplayState = validStates[newStateIndex].displays.clone();
+	}
+	else console.log("DANGER DANGER/HIGH VOLTAGE!");
 	showNewRegisterState();
-
-	register[this.index] = this.state;
 	this.stateSettings();
 }
 
@@ -64,10 +75,10 @@ Checker.prototype.iCanHazToggle = function() {
 				}
 			}
 		}
-		if(canChange) this.state = 0;
-		else this.state = 1;
+		if(canChange) return 0;
+		else return 1;
 	} else {
-		this.state = 1;
+		return 1;
 	}
 }
 
@@ -77,11 +88,21 @@ Checker.prototype.stateSettings = function () {
 		this.checkbox.checked = true;
 		this.parent.className+=" checked";
 	} else {
+		this.checkbox.checked = false;
 		this.parent.className="checkbox";
 	}
 }
 
-function setDisplayState() {
+function setDisplayState(specRegister) {
+	for(var i = 0; i < validStates.length; i++) {
+		if (validStates[i].stateSet.compareLike(specRegister)) {
+			return i;
+		}
+	}
+	return -1
+}
+
+function setInitDisplayState() {
 	for(var i = 0; i < validStates.length; i++) {
 		if (validStates[i].stateSet.compareLike(register)) {
 			return validStates[i].displays;
@@ -95,7 +116,7 @@ function initRegister() {
 	for(var i = 0; i < boxes.length;i++) {
 		register[i] = boxes[i].state;
 	}
-	currentDisplayState = setDisplayState();
+	currentDisplayState = setInitDisplayState(register);
 	showNewRegisterState();
 }
 
@@ -106,13 +127,24 @@ function showNewRegisterState() {
 		fields.find(">div:eq("+i+")>div:eq("+currentDisplayState[i]+")").fadeIn(100);
 	}
 }
+function updateForConflicts(specRegister,i) {
+	
+	if(specRegister[i] === 1) {
+		console.log("a conflict");
+		specRegister[i] = 0;
+		boxes[i].state = 0;
+		boxes[i].stateSettings();
+
+	}
+	return specRegister;
+}
 
 //Fill up Boxes Array
-boxes.push(new Checker(1,"persona",0));
-boxes.push(new Checker(0,"traditional",1));
-boxes.push(new Checker(0,"one_social",2));
-boxes.push(new Checker(0,"mult_social",3));
-
+boxes.push(new Checker(1,"persona",0,null));
+boxes.push(new Checker(0,"traditional",1,null));
+boxes.push(new Checker(0,"one_social",2,3));
+boxes.push(new Checker(0,"mult_social",3,2));
+boxes.push(new Checker(0,"add_info",4,null));
 
 initRegister();
 
