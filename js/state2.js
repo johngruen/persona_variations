@@ -51,14 +51,28 @@ Checker.prototype.bang = function() {
 	if (this.conflicts !== null) specRegister = updateForConflicts(specRegister,this.conflicts);
 	specRegister[this.index] = specState; 
 	var newStateIndex = setDisplayState(specRegister)
-	if ( newStateIndex >= 0) {
+	if (newStateIndex >= 0 && !register.compareLike(specRegister)) {
+		console.log(register);
+		console.log(specRegister);
 		this.state = specState;
 		register = validStates[newStateIndex].stateSet.clone();
 		currentDisplayState = validStates[newStateIndex].displays.clone();
+		showNewRegisterState();
+		this.stateSettings();
+
+	} else if (newStateIndex >= 0 && register.compareLike(specRegister)) {
+		this.checkbox.checked = true;
 	}
-	else console.log("DANGER DANGER/HIGH VOLTAGE!");
-	showNewRegisterState();
-	this.stateSettings();
+	else {
+		if (this.checkbox.checked) {
+			this.checkbox.checked = true;
+		} else {
+			this.checkbox.checked = false;
+		}
+		this.parent.style.backgroundColor = "#daa";
+		console.log("DANGER DANGER/HIGH VOLTAGE!");
+	}
+
 }
 
 //Checks to see if this toggle is the last man standing
@@ -117,14 +131,17 @@ function initRegister() {
 		register[i] = boxes[i].state;
 	}
 	currentDisplayState = setInitDisplayState(register);
-	showNewRegisterState();
+	fields.find(">div>div").hide();
+	for(var i = 0; i < 4 ; i++) {
+		fields.find(">div:eq("+i+")>div:eq("+currentDisplayState[i]+")").slideDown(00);
+	}
 }
 
 //SHOW NEW REGISTER STATE
 function showNewRegisterState() {
 	fields.find(">div>div").hide();
 	for(var i = 0; i < 4 ; i++) {
-		fields.find(">div:eq("+i+")>div:eq("+currentDisplayState[i]+")").fadeIn(100);
+		fields.find(">div:eq("+i+")>div:eq("+currentDisplayState[i]+")").slideDown(500);
 	}
 }
 function updateForConflicts(specRegister,i) {
