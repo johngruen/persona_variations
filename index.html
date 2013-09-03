@@ -13,24 +13,6 @@
 	<link href="css/bootstrap-responsive.css" rel="stylesheet">
 	<link href="css/user.css" rel="stylesheet">
 	<style type="text/css">
-		.modal
-		{
-			position: relative;
-			left: 0;
-			margin-left: 0;
-			top: -5px;
-			width: 100%;
-		}
-		
-		h5 { color: pink; }
-		.icon-persona
-		{
-			background-image: url(img/glyph_dark_small.png);
-			background-repeat: no-repeat;
-			background-position: 0 2px;
-			background-size: 14px;
-		}
-		span.badge { display: none; }
 </style>
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>s
@@ -55,26 +37,26 @@
 			</h3>
 			<form class="form-signin">
 				<fieldset>
-					<label class="checkbox"> 
+					<label class="checkbox">
 						<input type="checkbox" id="persona" value="option1">
-						 <strong>Persona</strong>  … or we’re thinking about it.
+						 <strong>Persona</strong>  … or we’re thinking about it.
 					</label>
-					<label class="checkbox"> 
+					<label class="checkbox">
 						<input type="checkbox" id="traditional" value="option2">
-						 <strong>Traditional Sign-in</strong>  i.e. we store passwords.
-					</label> 
-					<label class="checkbox"> 
+						 <strong>Traditional Sign-in</strong>  i.e. we store passwords.
+					</label>
+					<label class="checkbox">
 						<input type="checkbox" id="one_social" value="option3">
-						 <strong>One Social Sign-in</strong>  e.g. Facebook 
+						 <strong>One Social Sign-in</strong>  e.g. Facebook
 					</label>
-					<label class="checkbox"> 
+					<label class="checkbox">
 						<input type="checkbox" id="mult_social" value="option4">
-						 <strong>Multiple Social Sign-ins</strong>  e.g. Facebook, Google+ and GitHub
+						 <strong>Multiple Social Sign-ins</strong>  e.g. Facebook, Google+ and GitHub
 					</label>
-					<label class="checkbox"> 
+					<label class="checkbox">
 						<input type="checkbox" id="add_info" value="option5">
-						 <strong>Additional Profile Info Required</strong>  i.e. first name, last name, gender
-					</label> 
+						 <strong>Additional Profile Info Required</strong>  i.e. first name, last name, gender
+					</label>
 				</fieldset>
 			</form>
 		</div>
@@ -82,33 +64,33 @@
 	<div class="row" id="fields">
 		<div class="span3">
 			<h2>
-				Sign in/up link 
+				Sign in/up link
 			</h2>
 			<p><span class="badge">0</span><span class="badge">0+4</span></p>
-			<div class="alert alert-important">You must select at least one sign-in option</div>
+			<div class="alert alert-important">Select at least one sign-in option</div>
 			<p><span class="badge">1</span></p>
-			<div class="well persona">
+			<div class="well well-small persona">
 				<i class="icon-persona"></i> <a href="#">Sign in</a> or <a href="#">Sign Up</a>
 			</div>
 			<p><span class="badge">1+2</span> <span class="badge">1+2+3</span> <span class="badge">1+2+4</span> <span class="badge">2</span> <span class="badge">2+3</span> <span class="badge">2+4</span> </p>
-			<div class="well traditional">
-				 <a href="#">Sign in</a> or <a href="#">Sign up</a> 
+			<div class="well well-small traditional">
+				 <a href="#">Sign in</a> or <a href="#">Sign up</a>
 			</div>
 			<p><span class="badge">3</span></p>
-			<div class="well persona">
-				<button class="btn btn-small" type="submit"><i class="icon-star"></i> Social Sign-in</button> 
+			<div class="well well-small persona">
+				<button class="btn btn-small" type="submit"><i class="icon-star"></i> Social Sign-in</button>
 			</div>
 			<p><span class="badge">3+2</span> <span class="badge">4</span> <span class="badge">4+2</span></p>
-			<div class="well">
-				<a href="#">Sign in</a> 
+			<div class="well well-small">
+				<a href="#">Sign in</a>
 			</div>
 		</div>
 		<div class="span3">
 			<h2>
-				Sign up view 
+				Sign up view
 			</h2>
 			<p><span class="badge">0</span><span class="badge">0+4</span></p>
-			<div class="alert alert-important">You must select at least one sign-in option</div>
+			<div class="alert alert-important">Select at least one sign-in option</div>
 			<p><span class="badge">1</span></p>
 			<div class="alert alert-info">Provided by Persona</div>
 			<p><span class="badge">1+5</span></p>
@@ -116,35 +98,35 @@
 				<div class="alert alert-info">Persona sign-in then this…</div>
 				<div class="modal">
 					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> 
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 						<h3>
 							Additional info
 						</h3>
 					</div>
 					<div class="modal-body">
-						<input type="text" class="text" placeholder="First name">
-						<input type="text" class="text" placeholder="Last name">
+						<input type="text" class="input-block-level" placeholder="First name">
+						<input type="text" class="input-block-level" placeholder="Last name">
 					</div>
 					<div class="modal-footer">
-						<a href="#" class="btn btn-primary">Save</a> 
+						<a href="#" class="btn btn-primary">Save</a>
 					</div>
 				</div>
 			</div>
 			<p><span class="badge">2</span></p>
 			<div class="modal">
 				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> 
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					<h3>
-						Sign up with… 
+						Sign up
 					</h3>
 				</div>
 				<div class="modal-body">
-					<input type="text" class="text" placeholder="Email address">
-					<input type="password" class="text" placeholder="Password">
-					<input type="password" class="text" placeholder="Repeat password">
+					<input type="text" class="input-block-level" placeholder="Email address">
+					<input type="password" class="input-block-level" placeholder="Password">
+					<input type="password" class="input-block-level" placeholder="Repeat password">
 				</div>
 				<div class="modal-footer">
-					<a href="#" class="btn btn-primary">Sign up</a> 
+					<a href="#" class="btn btn-primary">Sign up</a>
 				</div>
 			</div>
 			<p><span class="badge">3</span></p>
@@ -152,246 +134,246 @@
 			<p><span class="badge">1+2</span></p>
 			<div class="modal">
 				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> 
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					<h3>
-						Sign up with… 
+						Sign up
 					</h3>
 				</div>
 				<div class="modal-body">
-					<button class="btn btn-small" type="submit"><i class="icon-persona"></i> Email</button> 
+					<button class="btn btn-small" type="submit"><i class="icon-persona"></i> Email</button>
 					<p style="text-align:left;margin:1em 0;">
-						or 
+						or
 					</p>
-					<input type="text" class="text" placeholder="Email address">
-					<input type="password" class="text" placeholder="Password">
-					<input type="password" class="text" placeholder="Repeat password">
+					<input type="text" class="input-block-level" placeholder="Email address">
+					<input type="password" class="input-block-level" placeholder="Password">
+					<input type="password" class="input-block-level" placeholder="Repeat password">
 				</div>
 				<div class="modal-footer">
-					<a href="#" class="btn btn-primary">Sign up</a> 
+					<a href="#" class="btn btn-primary">Sign up</a>
 				</div>
 			</div>
 			<p><span class="badge">1+2+5</span></p>
 			<div class="modal">
 				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> 
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					<h3>
-						Sign up with… 
+						Sign up
 					</h3>
 				</div>
 				<div class="modal-body">
-					<button class="btn btn-small" type="submit"><i class="icon-persona"></i> Email</button> 
+					<button class="btn btn-small" type="submit"><i class="icon-persona"></i> Email</button>
 					<p style="text-align:left;margin:1em 0;">
-						or 
+						or
 					</p>
-					<input type="text" class="text" placeholder="First name">
-					<input type="text" class="text" placeholder="Last name">
-					<input type="text" class="text" placeholder="Email address">
-					<input type="password" class="text" placeholder="Password">
-					<input type="password" class="text" placeholder="Repeat password">
+					<input type="text" class="input-block-level" placeholder="First name">
+					<input type="text" class="input-block-level" placeholder="Last name">
+					<input type="text" class="input-block-level" placeholder="Email address">
+					<input type="password" class="input-block-level" placeholder="Password">
+					<input type="password" class="input-block-level" placeholder="Repeat password">
 				</div>
 				<div class="modal-footer">
-					<a href="#" class="btn btn-primary">Sign up</a> 
+					<a href="#" class="btn btn-primary">Sign up</a>
 				</div>
 			</div>
 			<p><span class="badge">1+2</span></p>
 			<div class="modal">
 				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> 
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					<h3>
-						Sign up with… 
+						Sign up
 					</h3>
 				</div>
 				<div class="modal-body">
-					<button class="btn btn-small" type="submit"><i class="icon-persona"></i> Email</button> 
+					<button class="btn btn-small" type="submit"><i class="icon-persona"></i> Email</button>
 					<p style="text-align:left;margin:1em 0;">
-						or 
+						or
 					</p>
-					<input type="text" class="text" placeholder="Email address">
-					<input type="password" class="text" placeholder="Password">
-					<input type="password" class="text" placeholder="Repeat password">
+					<input type="text" class="input-block-level" placeholder="Email address">
+					<input type="password" class="input-block-level" placeholder="Password">
+					<input type="password" class="input-block-level" placeholder="Repeat password">
 				</div>
 				<div class="modal-footer">
-					<a href="#" class="btn btn-primary">Sign up</a> 
+					<a href="#" class="btn btn-primary">Sign up</a>
 				</div>
 			</div>
 			<p><span class="badge">1+2+3+5</span></p>
 			<div class="modal">
 				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> 
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					<h3>
-						Sign up with… 
+						Sign up
 					</h3>
 				</div>
 				<div class="modal-body">
-					<button class="btn btn-small" type="submit">Facebook</button> <button class="btn btn-small" type="submit"><i class="icon-persona"></i> Email</button> 
+					<button class="btn btn-small" type="submit">Facebook</button> <button class="btn btn-small" type="submit"><i class="icon-persona"></i> Email</button>
 					<p style="text-align:left;margin:1em 0;">
-						or 
+						or
 					</p>
-					<input type="text" class="text" placeholder="First name">
-					<input type="text" class="text" placeholder="Last name">
-					<input type="text" class="text" placeholder="Email address">
-					<input type="password" class="text" placeholder="Password">
-					<input type="password" class="text" placeholder="Repeat password">
+					<input type="text" class="input-block-level" placeholder="First name">
+					<input type="text" class="input-block-level" placeholder="Last name">
+					<input type="text" class="input-block-level" placeholder="Email address">
+					<input type="password" class="input-block-level" placeholder="Password">
+					<input type="password" class="input-block-level" placeholder="Repeat password">
 				</div>
 				<div class="modal-footer">
-					<a href="#" class="btn btn-primary">Sign up</a> 
+					<a href="#" class="btn btn-primary">Sign up</a>
 				</div>
 			</div>
 			<p><span class="badge">1+2+4+5</span></p>
 			<div class="modal">
 				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> 
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					<h3>
-						Sign up with… 
+						Sign up
 					</h3>
 				</div>
 				<div class="modal-body">
-					<button class="btn btn-small" type="submit">Facebook</button> <button class="btn btn-small" type="submit">Twitter</button> <button class="btn btn-small" type="submit"><i class="icon-persona"></i> Email</button> 
+					<button class="btn btn-small" type="submit">Facebook</button> <button class="btn btn-small" type="submit">Twitter</button> <button class="btn btn-small" type="submit"><i class="icon-persona"></i> Email</button>
 					<p style="text-align:left;margin:1em 0;">
-						or 
+						or
 					</p>
-					<input type="text" class="text" placeholder="First name">
-					<input type="text" class="text" placeholder="Last name">
-					<input type="text" class="text" placeholder="Email address">
-					<input type="password" class="text" placeholder="Password">
-					<input type="password" class="text" placeholder="Repeat password">
+					<input type="text" class="input-block-level" placeholder="First name">
+					<input type="text" class="input-block-level" placeholder="Last name">
+					<input type="text" class="input-block-level" placeholder="Email address">
+					<input type="password" class="input-block-level" placeholder="Password">
+					<input type="password" class="input-block-level" placeholder="Repeat password">
 				</div>
 				<div class="modal-footer">
-					<a href="#" class="btn btn-primary">Sign up</a> 
+					<a href="#" class="btn btn-primary">Sign up</a>
 				</div>
 			</div>
 			<p><span class="badge">1+5</span></p>
 			<div class="modal">
 				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> 
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					<h3>
-						Sign up with… 
+						Sign up
 					</h3>
 				</div>
 				<div class="modal-body">
-					<input type="text" class="text" placeholder="First name">
-					<input type="text" class="text" placeholder="Last name">
-					<input type="text" class="text" placeholder="Email address">
-					<input type="password" class="text" placeholder="Password">
-					<input type="password" class="text" placeholder="Repeat password">
+					<input type="text" class="input-block-level" placeholder="First name">
+					<input type="text" class="input-block-level" placeholder="Last name">
+					<input type="text" class="input-block-level" placeholder="Email address">
+					<input type="password" class="input-block-level" placeholder="Password">
+					<input type="password" class="input-block-level" placeholder="Repeat password">
 				</div>
 				<div class="modal-footer">
-					<a href="#" class="btn btn-primary">Sign up</a> 
+					<a href="#" class="btn btn-primary">Sign up</a>
 				</div>
 			</div>
 			<p><span class="badge">1+3</span></p>
 			<div class="modal">
 				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> 
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					<h3>
-						Sign up with… 
+						Sign up
 					</h3>
 				</div>
 				<div class="modal-body">
-					<button class="btn btn-small" type="submit">Facebook</button> <button class="btn btn-small" type="submit"><i class="icon-persona"></i> Email</button> 
+					<button class="btn btn-small" type="submit">Facebook</button> <button class="btn btn-small" type="submit"><i class="icon-persona"></i> Email</button>
 				</div>
 			</div>
 			<p><span class="badge">2+3</span></p>
 			<div class="modal">
 				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> 
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					<h3>
-						Sign up with… 
+						Sign up
 					</h3>
 				</div>
 				<div class="modal-body">
 					<button class="btn btn-small" type="submit">Facebook</button>
 					<p style="text-align:left;margin:1em 0;">
-						or 
+						or
 					</p>
-					<input type="text" class="text" placeholder="Email address">
-					<input type="password" class="text" placeholder="Password">
-					<input type="password" class="text" placeholder="Repeat password">
+					<input type="text" class="input-block-level" placeholder="Email address">
+					<input type="password" class="input-block-level" placeholder="Password">
+					<input type="password" class="input-block-level" placeholder="Repeat password">
 				</div>
 				<div class="modal-footer">
-					<a href="#" class="btn btn-primary">Sign up</a> 
+					<a href="#" class="btn btn-primary">Sign up</a>
 				</div>
 			</div>
 			<p><span class="badge">2+3+5</span></p>
 			<div class="modal">
 				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> 
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					<h3>
-						Sign up with… 
+						Sign up
 					</h3>
 				</div>
 				<div class="modal-body">
 					<button class="btn btn-small" type="submit">Facebook</button>
 					<p style="text-align:left;margin:1em 0;">
-						or 
+						or
 					</p>
-					<input type="text" class="text" placeholder="First name">
-					<input type="text" class="text" placeholder="Last name">
-					<input type="text" class="text" placeholder="Email address">
-					<input type="password" class="text" placeholder="Password">
-					<input type="password" class="text" placeholder="Repeat password">
+					<input type="text" class="input-block-level" placeholder="First name">
+					<input type="text" class="input-block-level" placeholder="Last name">
+					<input type="text" class="input-block-level" placeholder="Email address">
+					<input type="password" class="input-block-level" placeholder="Password">
+					<input type="password" class="input-block-level" placeholder="Repeat password">
 				</div>
 				<div class="modal-footer">
-					<a href="#" class="btn btn-primary">Sign up</a> 
+					<a href="#" class="btn btn-primary">Sign up</a>
 				</div>
 			</div>
 			<p><span class="badge">2+4</span> <span class="badge">2+4+5</span></p>
 			<div class="modal">
 				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> 
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					<h3>
-						Sign up with… 
+						Sign up
 					</h3>
 				</div>
 				<div class="modal-body">
 					<button class="btn btn-small" type="submit">Facebook</button> <button class="btn btn-small" type="submit">Twitter</button>
 					<p style="text-align:left;margin:1em 0;">
-						or 
+						or
 					</p>
-					<input type="text" class="text" placeholder="Email address">
-					<input type="password" class="text" placeholder="Password">
-					<input type="password" class="text" placeholder="Repeat password">
+					<input type="text" class="input-block-level" placeholder="Email address">
+					<input type="password" class="input-block-level" placeholder="Password">
+					<input type="password" class="input-block-level" placeholder="Repeat password">
 				</div>
 				<div class="modal-footer">
-					<a href="#" class="btn btn-primary">Sign up</a> 
+					<a href="#" class="btn btn-primary">Sign up</a>
 				</div>
 			</div>
 			<p><span class="badge">4</span> <span class="badge">4+5</span></p>
 			<div class="modal">
 				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> 
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					<h3>
-						Sign up with… 
+						Sign up
 					</h3>
 				</div>
 				<div class="modal-body">
-					<button class="btn btn-small" type="submit">Facebook</button> <button class="btn btn-small" type="submit">Twitter</button> 
+					<button class="btn btn-small" type="submit">Facebook</button> <button class="btn btn-small" type="submit">Twitter</button>
 				</div>
 			</div>
 			<div>
 				<div class="alert alert-info">Social sign-in then this…</div>
 				<div class="modal">
 					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> 
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 						<h3>
 							Additional info
 						</h3>
 					</div>
 					<div class="modal-body">
-						<input type="text" class="text" placeholder="First name">
-						<input type="text" class="text" placeholder="Last name">
+						<input type="text" class="input-block-level" placeholder="First name">
+						<input type="text" class="input-block-level" placeholder="Last name">
 					</div>
 					<div class="modal-footer">
-						<a href="#" class="btn btn-primary">Save</a> 
+						<a href="#" class="btn btn-primary">Save</a>
 					</div>
 				</div>
 			</div>
 			<div>
 				<div class="modal">
 					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> 
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 						<h3>
-							Sign up with… 
+							Sign up
 						</h3>
 					</div>
 					<div class="modal-body">
@@ -401,126 +383,126 @@
 				<div class="alert alert-info">… and then this…</div>
 				<div class="modal">
 					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> 
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 						<h3>
 							Additional info
 						</h3>
 					</div>
 					<div class="modal-body">
-						<input type="text" class="text" placeholder="First name">
-						<input type="text" class="text" placeholder="Last name">
+						<input type="text" class="input-block-level" placeholder="First name">
+						<input type="text" class="input-block-level" placeholder="Last name">
 					</div>
 					<div class="modal-footer">
-						<a href="#" class="btn btn-primary">Save</a> 
+						<a href="#" class="btn btn-primary">Save</a>
 					</div>
 				</div>
 			</div>
 			<p><span class="badge">1+4</span></p>
 			<div class="modal">
 				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> 
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					<h3>
-						Sign up with… 
+						Sign up
 					</h3>
 				</div>
 				<div class="modal-body">
-					<button class="btn btn-small" type="submit">Facebook</button> <button class="btn btn-small" type="submit">Twitter</button> <button class="btn btn-small" type="submit"><i class="icon-persona"></i> Email</button> 
+					<button class="btn btn-small" type="submit">Facebook</button> <button class="btn btn-small" type="submit">Twitter</button> <button class="btn btn-small" type="submit"><i class="icon-persona"></i> Email</button>
 				</div>
 			</div>
 			<div>
 				<div class="modal">
 					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> 
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 						<h3>
-							Sign up with… 
+							Sign up
 						</h3>
 					</div>
 					<div class="modal-body">
-						<button class="btn btn-small" type="submit">Facebook</button> <button class="btn btn-small" type="submit">Twitter</button> <button class="btn btn-small" type="submit"><i class="icon-persona"></i> Email</button> 
+						<button class="btn btn-small" type="submit">Facebook</button> <button class="btn btn-small" type="submit">Twitter</button> <button class="btn btn-small" type="submit"><i class="icon-persona"></i> Email</button>
 					</div>
 				</div>
 				<div class="alert alert-info">… and then this…</div>
 				<div class="modal">
 					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> 
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 						<h3>
 							Additional info
 						</h3>
 					</div>
 					<div class="modal-body">
-						<input type="text" class="text" placeholder="First name">
-						<input type="text" class="text" placeholder="Last name">
+						<input type="text" class="input-block-level" placeholder="First name">
+						<input type="text" class="input-block-level" placeholder="Last name">
 					</div>
 					<div class="modal-footer">
-						<a href="#" class="btn btn-primary">Save</a> 
+						<a href="#" class="btn btn-primary">Save</a>
 					</div>
 				</div>
 			</div>
 			<p><span class="badge">1+2+4</span></p>
 			<div class="modal">
 				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> 
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					<h3>
-						Sign up with… 
+						Sign up
 					</h3>
 				</div>
 				<div class="modal-body">
-					<button class="btn btn-small" type="submit">Facebook</button> <button class="btn btn-small" type="submit">Twitter</button> <button class="btn btn-small" type="submit"><i class="icon-persona"></i> Email</button> 
+					<button class="btn btn-small" type="submit">Facebook</button> <button class="btn btn-small" type="submit">Twitter</button> <button class="btn btn-small" type="submit"><i class="icon-persona"></i> Email</button>
 					<p style="text-align:left;margin:1em 0;">
-						or 
+						or
 					</p>
-					<input type="text" class="text" placeholder="Email address">
-					<input type="password" class="text" placeholder="Password">
-					<input type="password" class="text" placeholder="Repeat password">
+					<input type="text" class="input-block-level" placeholder="Email address">
+					<input type="password" class="input-block-level" placeholder="Password">
+					<input type="password" class="input-block-level" placeholder="Repeat password">
 				</div>
 				<div class="modal-footer">
-					<a href="#" class="btn btn-primary">Sign up</a> 
+					<a href="#" class="btn btn-primary">Sign up</a>
 				</div>
 			</div>
 			<p><span class="badge">1+2+3</span></p>
 			<div class="modal">
 				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> 
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					<h3>
-						Sign up with… 
+						Sign up
 					</h3>
 				</div>
 				<div class="modal-body">
-					<button class="btn btn-small" type="submit">Facebook</button> <button class="btn btn-small" type="submit"><i class="icon-persona"></i> Email</button> 
+					<button class="btn btn-small" type="submit">Facebook</button> <button class="btn btn-small" type="submit"><i class="icon-persona"></i> Email</button>
 					<p style="text-align:left;margin:1em 0;">
-						or 
+						or
 					</p>
-					<input type="text" class="text" placeholder="Email address">
-					<input type="password" class="text" placeholder="Password">
-					<input type="password" class="text" placeholder="Repeat password">
+					<input type="text" class="input-block-level" placeholder="Email address">
+					<input type="password" class="input-block-level" placeholder="Password">
+					<input type="password" class="input-block-level" placeholder="Repeat password">
 				</div>
 				<div class="modal-footer">
-					<a href="#" class="btn btn-primary">Sign up</a> 
+					<a href="#" class="btn btn-primary">Sign up</a>
 				</div>
 			</div>
 		</div>
 		<div class="span3">
 			<h2>
-				Sign in view 
+				Sign in view
 			</h2>
 			<p><span class="badge">0</span><span class="badge">0+4</span></p>
-			<div class="alert alert-important">You must select at least one sign-in option</div>
+			<div class="alert alert-important">Select at least one sign-in option</div>
 			<p><span class="badge">1</span></p>
 			<div class="alert alert-info">Provided by Persona</div>
 			<p><span class="badge">2</span></p>
 			<div class="modal">
 				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> 
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					<h3>
-						Sign in 
+						Sign in
 					</h3>
 				</div>
 				<div class="modal-body">
-					<input type="text" class="text" placeholder="Email address">
-					<input type="password" class="text" placeholder="Password">
+					<input type="text" class="input-block-level" placeholder="Email address">
+					<input type="password" class="input-block-level" placeholder="Password">
 				</div>
 				<div class="modal-footer">
-					<a href="#" class="btn btn-primary">Sign in</a> 
+					<a href="#" class="btn btn-primary">Sign in</a>
 				</div>
 			</div>
 			<p><span class="badge">3</span></p>
@@ -528,174 +510,174 @@
 			<p><span class="badge">1+2+3+5</span></p>
 			<div class="modal">
 				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> 
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					<h3>
-						Sign in with… 
+						Sign in
 					</h3>
 				</div>
 				<div class="modal-body">
-					<button class="btn btn-small" type="submit">Facebook</button> <button class="btn btn-small" type="submit"><i class="icon-persona"></i> Email</button> 
+					<button class="btn btn-small" type="submit">Facebook</button> <button class="btn btn-small" type="submit"><i class="icon-persona"></i> Email</button>
 					<p style="text-align:left;margin:1em 0;">
-						or 
+						or
 					</p>
-					<input type="text" class="text" placeholder="Email address">
-					<input type="password" class="text" placeholder="Password">
+					<input type="text" class="input-block-level" placeholder="Email address">
+					<input type="password" class="input-block-level" placeholder="Password">
 				</div>
 				<div class="modal-footer">
-					<a href="#" class="btn btn-primary">Sign in</a> 
+					<a href="#" class="btn btn-primary">Sign in</a>
 				</div>
 			</div>
 			<p><span class="badge">1+2+4+5</span></p>
 			<div class="modal">
 				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> 
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					<h3>
-						Sign in with… 
+						Sign in
 					</h3>
 				</div>
 				<div class="modal-body">
-					<button class="btn btn-small" type="submit">Facebook</button> <button class="btn btn-small" type="submit">Twitter</button> <button class="btn btn-small" type="submit"><i class="icon-persona"></i> Email</button> 
+					<button class="btn btn-small" type="submit">Facebook</button> <button class="btn btn-small" type="submit">Twitter</button> <button class="btn btn-small" type="submit"><i class="icon-persona"></i> Email</button>
 					<p style="text-align:left;margin:1em 0;">
-						or 
+						or
 					</p>
-					<input type="text" class="text" placeholder="Email address">
-					<input type="password" class="text" placeholder="Password">
+					<input type="text" class="input-block-level" placeholder="Email address">
+					<input type="password" class="input-block-level" placeholder="Password">
 				</div>
 				<div class="modal-footer">
-					<a href="#" class="btn btn-primary">Sign in</a> 
+					<a href="#" class="btn btn-primary">Sign in</a>
 				</div>
 			</div>
 			<p><span class="badge">1+4</span></p>
 			<div class="modal">
 				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> 
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					<h3>
-						Sign in with… 
+						Sign in
 					</h3>
 				</div>
 				<div class="modal-body">
-					<button class="btn btn-small" type="submit">Facebook</button> <button class="btn btn-small" type="submit">Twitter</button> <button class="btn btn-small" type="submit"><i class="icon-persona"></i> Email</button> 
+					<button class="btn btn-small" type="submit">Facebook</button> <button class="btn btn-small" type="submit">Twitter</button> <button class="btn btn-small" type="submit"><i class="icon-persona"></i> Email</button>
 				</div>
 			</div>
 			<p><span class="badge">1+3</span></p>
 			<div class="modal">
 				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> 
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					<h3>
-						Sign in with… 
+						Sign in
 					</h3>
 				</div>
 				<div class="modal-body">
-					<button class="btn btn-small" type="submit">Facebook</button> <button class="btn btn-small" type="submit"><i class="icon-persona"></i> Email</button> 
+					<button class="btn btn-small" type="submit">Facebook</button> <button class="btn btn-small" type="submit"><i class="icon-persona"></i> Email</button>
 				</div>
 			</div>
 			<p><span class="badge">3</span></p>
 			<div class="modal">
 				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> 
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					<h3>
-						Sign in with… 
+						Sign in
 					</h3>
 				</div>
 				<div class="modal-body">
-					<button class="btn btn-small" type="submit">Facebook</button> <button class="btn btn-small" type="submit">Twitter</button> 
+					<button class="btn btn-small" type="submit">Facebook</button> <button class="btn btn-small" type="submit">Twitter</button>
 				</div>
 			</div>
 			<p><span class="badge">2+3</span> <span class="badge">2+3+5</span></p>
 			<div class="modal">
 				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> 
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					<h3>
-						Sign in with… 
+						Sign in
 					</h3>
 				</div>
 				<div class="modal-body">
 					<button class="btn btn-small" type="submit">Facebook</button>
 					<p style="text-align:left;margin:1em 0;">
-						or 
+						or
 					</p>
-					<input type="text" class="text" placeholder="Email address">
-					<input type="password" class="text" placeholder="Password">
+					<input type="text" class="input-block-level" placeholder="Email address">
+					<input type="password" class="input-block-level" placeholder="Password">
 				</div>
 				<div class="modal-footer">
-					<a href="#" class="btn btn-primary">Sign in</a> 
+					<a href="#" class="btn btn-primary">Sign in</a>
 				</div>
 			</div>
 			<p><span class="badge">2+4</span> <span class="badge">2+4+5</span></p>
 			<div class="modal">
 				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> 
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					<h3>
-						Sign in with… 
+						Sign in
 					</h3>
 				</div>
 				<div class="modal-body">
 					<button class="btn btn-small" type="submit">Facebook</button> <button class="btn btn-small" type="submit">Twitter</button>
 					<p style="text-align:left;margin:1em 0;">
-						or 
+						or
 					</p>
-					<input type="text" class="text" placeholder="Email address">
-					<input type="password" class="text" placeholder="Password">
+					<input type="text" class="input-block-level" placeholder="Email address">
+					<input type="password" class="input-block-level" placeholder="Password">
 				</div>
 				<div class="modal-footer">
-					<a href="#" class="btn btn-primary">Sign in</a> 
+					<a href="#" class="btn btn-primary">Sign in</a>
 				</div>
 			</div>
 			<p><span class="badge">1+2</span></p>
 			<div class="modal">
 				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> 
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					<h3>
-						Sign in with… 
+						Sign in
 					</h3>
 				</div>
 				<div class="modal-body">
-					<button class="btn btn-small" type="submit"><i class="icon-persona"></i> Email</button> 
+					<button class="btn btn-small" type="submit"><i class="icon-persona"></i> Email</button>
 					<p style="text-align:left;margin:1em 0;">
-						or 
+						or
 					</p>
-					<input type="text" class="text" placeholder="Email address">
-					<input type="password" class="text" placeholder="Password">
+					<input type="text" class="input-block-level" placeholder="Email address">
+					<input type="password" class="input-block-level" placeholder="Password">
 				</div>
 				<div class="modal-footer">
-					<a href="#" class="btn btn-primary">Sign in</a> 
+					<a href="#" class="btn btn-primary">Sign in</a>
 				</div>
 			</div>
 			<p><span class="badge">1+2+5</span></p>
 			<div class="modal">
 				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> 
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					<h3>
-						Sign in with… 
+						Sign in
 					</h3>
 				</div>
 				<div class="modal-body">
-					<button class="btn btn-small" type="submit"><i class="icon-persona"></i> Email</button> 
+					<button class="btn btn-small" type="submit"><i class="icon-persona"></i> Email</button>
 					<p style="text-align:left;margin:1em 0;">
-						or 
+						or
 					</p>
-					<input type="text" class="text" placeholder="Email address">
-					<input type="password" class="text" placeholder="Password">
+					<input type="text" class="input-block-level" placeholder="Email address">
+					<input type="password" class="input-block-level" placeholder="Password">
 				</div>
 				<div class="modal-footer">
-					<a href="#" class="btn btn-primary">Sign in</a> 
+					<a href="#" class="btn btn-primary">Sign in</a>
 				</div>
 			</div>
 
 		</div>
 		<div class="span3">
 			<h2>
-				Sign out link 
+				Sign out link
 			</h2>
 			<p><span class="badge">0</span><span class="badge">0+4</span></p>
-			<div class="alert alert-important">You must select at least one sign-in option</div>
+			<div class="alert alert-important">Select at least one sign-in option</div>
 			<p><span class="badge">ANY-5</span></p>
-			<div class="well">
-				user@domain… &nbsp; <a href="#">Sign Out</a> 
+			<div class="well well-small">
+				user@domain… &nbsp; <a href="#">Sign Out</a>
 			</div>
 			<p><span class="badge">ANY+5</span></p>
-			<div class="well">
-				user@domain… &nbsp; <a href="#">Settings</a> | <a href="#">Sign Out</a> 
+			<div class="well well-small">
+				user@domain… &nbsp; <a href="#">Settings</a> | <a href="#">Sign Out</a>
 			</div>
 		</div>
 	</div>
