@@ -20,7 +20,7 @@ var validStates = [
 	{ stateSet:[1,0,0,1,0],		displays:[2,18,6,1]		},
 	{ stateSet:[1,0,0,1,1],		displays:[2,19,6,2]		},
 	{ stateSet:[1,0,1,0,0],		displays:[2,11,7,1]		},
-	{ stateSet:[1,0,1,0,1],		displays:[2,8,7,2]		},
+	{ stateSet:[1,0,1,0,1],		displays:[2,11,7,2]		},
 // 	{ stateSet:[1,0,1,1,0],		displays:[2,7,11,1]		},
 // 	{ stateSet:[1,0,1,1,1],		displays:[2,8,11,2]		},
 	{ stateSet:[1,1,0,0,0],		displays:[2,5,11,1]		},
