@@ -178,3 +178,5 @@ h5 { color: pink; }
 span.badge { display: none; }
 
 .modal { box-shadow: none; border-color: rgba(0,0,0,0.2);}
+
+input[type='checkbox'] {outline:none;}
