@@ -172,8 +172,11 @@ h5 { color: pink; }
 {
 	background-image: url(../img/glyph_dark_small.png);
 	background-repeat: no-repeat;
-	background-position: 0 2px;
+	background-position: 0 3px;
 	background-size: 14px;
+	height: 14px;
+	width: 14px;
+	display: inline-block;
 }
 span.badge { display: none; }
 
